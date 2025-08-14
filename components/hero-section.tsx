@@ -16,7 +16,7 @@ export default function HeroSection() {
           {/* Text Content */}
           <div className="text-white space-y-6 max-w-4xl">
             <div className="space-y-2">
-              <span className="text-sm font-medium tracking-wider uppercase text-brand-orange">
+              <span className="hidden text-sm font-medium tracking-wider uppercase text-brand-orange">
                 WELCOME TO PLANET FITNESS
               </span>
               <h1 className="text-4xl sm:text-5xl font-bold font-serif leading-tight">
