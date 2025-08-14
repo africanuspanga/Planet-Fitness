@@ -12,21 +12,21 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         {/* Mobile Layout - Stacked */}
-        <div className="flex flex-col items-center text-center space-y-8 lg:hidden">
+        <div className="flex flex-col items-center text-center space-y-6 lg:hidden">
           {/* Text Content */}
-          <div className="text-white space-y-6 max-w-4xl">
+          <div className="text-white space-y-4 max-w-4xl">
             <div className="space-y-2">
-              <span className="hidden text-sm font-medium tracking-wider uppercase text-brand-orange">
+              <span className="text-xs sm:text-sm font-medium tracking-wider uppercase text-brand-orange">
                 WELCOME TO PLANET FITNESS
               </span>
-              <h1 className="text-4xl sm:text-5xl font-bold font-serif leading-tight">
+              <h1 className="text-3xl sm:text-4xl font-bold font-serif leading-tight">
                 Get Your Goal
                 <br />
                 With Fitness
               </h1>
             </div>
 
-            <p className="text-lg opacity-90 max-w-2xl leading-relaxed mx-auto">
+            <p className="text-base sm:text-lg opacity-90 max-w-xl leading-relaxed mx-auto">
               Transform your body and mind with our world-class equipment, expert trainers, and supportive community
               dedicated to your fitness journey.
             </p>
@@ -35,7 +35,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-h-[48px] touch-manipulation"
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-h-[48px] touch-manipulation"
               >
                 <Link href="/contact">GET STARTED</Link>
               </Button>
@@ -43,9 +43,9 @@ export default function HeroSection() {
           </div>
 
           {/* Hero Image with Stats - Below text on mobile */}
-          <div className="relative w-full max-w-lg">
+          <div className="relative w-full max-w-sm sm:max-w-md">
             <div className="relative z-10">
-              <div className="w-full h-80 relative">
+              <div className="w-full h-64 sm:h-72 relative">
                 <img
                   src="/images/hero-athlete.png"
                   alt="Strong athlete holding dumbbells"
@@ -53,23 +53,23 @@ export default function HeroSection() {
                 />
 
                 {/* Fitness Stats Overlays */}
-                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-lg">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-brand-orange rounded-full animate-pulse"></div>
-                    <span className="text-brand-orange font-bold text-base">96 BPM</span>
+                <div className="absolute top-2 right-2 bg-white/95 backdrop-blur-sm rounded-xl p-2 shadow-lg">
+                  <div className="flex items-center space-x-1">
+                    <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
+                    <span className="text-brand-orange font-bold text-sm">96 BPM</span>
                   </div>
-                  <p className="text-xs text-gray-600 mt-1">This Minute Running</p>
+                  <p className="text-xs text-gray-600">Running</p>
                 </div>
 
-                <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-lg">
+                <div className="absolute bottom-2 left-2 bg-white/95 backdrop-blur-sm rounded-xl p-2 shadow-lg">
                   <div className="text-center">
-                    <p className="text-gray-600 text-xs">Calories Burn</p>
-                    <p className="text-xl font-bold text-brand-gray">1020 Cal</p>
-                    <div className="flex space-x-1 mt-2">
-                      {[...Array(8)].map((_, i) => (
+                    <p className="text-gray-600 text-xs">Calories</p>
+                    <p className="text-lg font-bold text-brand-gray">1020</p>
+                    <div className="flex space-x-0.5 mt-1">
+                      {[...Array(6)].map((_, i) => (
                         <div
                           key={i}
-                          className={`w-1 rounded-full ${i < 6 ? "bg-brand-orange h-4" : "bg-gray-300 h-2"}`}
+                          className={`w-0.5 rounded-full ${i < 4 ? "bg-brand-orange h-3" : "bg-gray-300 h-2"}`}
                         ></div>
                       ))}
                     </div>
