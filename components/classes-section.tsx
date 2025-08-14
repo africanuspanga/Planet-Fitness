@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Dumbbell, Heart, Zap } from "lucide-react"
+import { Dumbbell, Heart, Zap } from "lucide-react"
 
 export default function ClassesSection() {
   const classes = [
@@ -58,14 +57,6 @@ export default function ClassesSection() {
               <div className="p-6 space-y-4">
                 <h3 className="text-xl font-bold text-brand-gray">{classItem.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{classItem.description}</p>
-
-                <Button
-                  variant="ghost"
-                  className="text-brand-orange hover:text-brand-orange/80 p-0 h-auto font-medium group/btn"
-                >
-                  Read More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
               </div>
             </div>
           ))}
