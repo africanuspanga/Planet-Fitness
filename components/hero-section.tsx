@@ -3,49 +3,147 @@ import Link from "next/link"
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-brand-orange overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-10 right-10 sm:top-20 sm:right-20 w-48 h-48 sm:w-96 sm:h-96 bg-white/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 sm:bottom-20 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 bg-white/5 rounded-full blur-2xl"></div>
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden"
+    >
+      <div className="absolute top-10 right-10 sm:top-20 sm:right-20 w-48 h-48 sm:w-96 sm:h-96 bg-brand-orange/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-10 sm:bottom-20 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 bg-brand-orange/10 rounded-full blur-2xl"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-white space-y-6 sm:space-y-8 text-center lg:text-left">
+        {/* Mobile Layout - Stacked */}
+        <div className="flex flex-col items-center text-center space-y-8 lg:hidden">
+          {/* Text Content */}
+          <div className="text-white space-y-6 max-w-4xl">
             <div className="space-y-2">
-              <span className="text-xs sm:text-sm font-medium tracking-wider uppercase opacity-90">PLANET FITNESS</span>
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-serif leading-tight">
-                Transform
+              <span className="text-sm font-medium tracking-wider uppercase text-brand-orange">
+                WELCOME TO PLANET FITNESS
+              </span>
+              <h1 className="text-4xl sm:text-5xl font-bold font-serif leading-tight">
+                Get Your Goal
                 <br />
-                Your Life
+                With Fitness
               </h1>
             </div>
 
-            <span className="text-base sm:text-lg lg:text-xl opacity-90 max-w-lg leading-relaxed block mx-auto lg:mx-0">
-              Join Planet Fitness and discover world-class equipment, expert guidance, and a supportive community
+            <p className="text-lg opacity-90 max-w-2xl leading-relaxed mx-auto">
+              Transform your body and mind with our world-class equipment, expert trainers, and supportive community
               dedicated to your fitness journey.
-            </span>
+            </p>
 
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-center pt-2">
               <Button
                 asChild
                 size="lg"
-                className="bg-brand-gray hover:bg-brand-gray/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg btn-hover transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-h-[48px] touch-manipulation"
               >
                 <Link href="/contact">GET STARTED</Link>
               </Button>
             </div>
           </div>
 
-          {/* Right Content - Hero Image */}
-          <div className="relative order-first lg:order-last">
+          {/* Hero Image with Stats - Below text on mobile */}
+          <div className="relative w-full max-w-lg">
             <div className="relative z-10">
-              <div className="w-full h-64 sm:h-80 lg:h-[500px] relative rounded-3xl overflow-hidden">
+              <div className="w-full h-80 relative">
                 <img
-                  src="/images/hero-gym-woman.png"
-                  alt="Woman training with gym equipment"
+                  src="/images/hero-athlete.png"
+                  alt="Strong athlete holding dumbbells"
                   className="w-full h-full object-contain object-center"
                 />
+
+                {/* Fitness Stats Overlays */}
+                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-lg">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-brand-orange rounded-full animate-pulse"></div>
+                    <span className="text-brand-orange font-bold text-base">96 BPM</span>
+                  </div>
+                  <p className="text-xs text-gray-600 mt-1">This Minute Running</p>
+                </div>
+
+                <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-lg">
+                  <div className="text-center">
+                    <p className="text-gray-600 text-xs">Calories Burn</p>
+                    <p className="text-xl font-bold text-brand-gray">1020 Cal</p>
+                    <div className="flex space-x-1 mt-2">
+                      {[...Array(8)].map((_, i) => (
+                        <div
+                          key={i}
+                          className={`w-1 rounded-full ${i < 6 ? "bg-brand-orange h-4" : "bg-gray-300 h-2"}`}
+                        ></div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout - Side by side */}
+        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+          {/* Text Content */}
+          <div className="text-white space-y-8">
+            <div className="space-y-3">
+              <span className="text-base font-medium tracking-wider uppercase text-brand-orange">
+                WELCOME TO PLANET FITNESS
+              </span>
+              <h1 className="text-6xl xl:text-7xl font-bold font-serif leading-tight">
+                Get Your Goal
+                <br />
+                With Fitness
+              </h1>
+            </div>
+
+            <p className="text-xl opacity-90 leading-relaxed">
+              Transform your body and mind with our world-class equipment, expert trainers, and supportive community
+              dedicated to your fitness journey.
+            </p>
+
+            <div className="pt-4">
+              <Button
+                asChild
+                size="lg"
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-10 py-5 rounded-full text-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <Link href="/contact">GET STARTED</Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Hero Image with Stats - Side by side on desktop */}
+          <div className="relative">
+            <div className="relative z-10">
+              <div className="w-full h-[600px] relative">
+                <img
+                  src="/images/hero-athlete.png"
+                  alt="Strong athlete holding dumbbells"
+                  className="w-full h-full object-contain object-center"
+                />
+
+                {/* Fitness Stats Overlays */}
+                <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-brand-orange rounded-full animate-pulse"></div>
+                    <span className="text-brand-orange font-bold text-lg">96 BPM</span>
+                  </div>
+                  <p className="text-xs text-gray-600 mt-1">This Minute Running</p>
+                </div>
+
+                <div className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                  <div className="text-center">
+                    <p className="text-gray-600 text-sm">Calories Burn</p>
+                    <p className="text-2xl font-bold text-brand-gray">1020 Cal</p>
+                    <div className="flex space-x-1 mt-2">
+                      {[...Array(8)].map((_, i) => (
+                        <div
+                          key={i}
+                          className={`w-1 rounded-full ${i < 6 ? "bg-brand-orange h-6" : "bg-gray-300 h-3"}`}
+                        ></div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

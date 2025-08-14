@@ -29,9 +29,8 @@ export default function Navigation() {
                 alt="Planet Fitness"
                 width={120}
                 height={40}
-                className="h-8 sm:h-10 w-auto hidden sm:block"
+                className="h-8 sm:h-10 w-auto"
               />
-              <Image src="/logo-icon.png" alt="Planet Fitness" width={40} height={40} className="h-8 w-8 sm:hidden" />
             </Link>
           </div>
 
