@@ -1,18 +1,18 @@
 import Navigation from "@/components/navigation"
-import { Phone, Mail, MapPin, Clock, CreditCard, Smartphone, Building, Banknote } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, CreditCard, Smartphone, Building, Banknote, Instagram } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Contact Planet Fitness Tanzania - Get In Touch | Gym Membership Info",
   description:
-    "Contact Planet Fitness Tanzania for membership information, pricing, and inquiries. Multiple payment options available including M-Pesa, bank transfer, and cash.",
+    "Contact Planet Fitness Tanzania for membership information, pricing, and inquiries. Located at Gymkhana Ground, Garden Avenue, Dar es Salaam. Multiple payment options available.",
   keywords:
-    "Planet Fitness contact, gym membership Tanzania, fitness center Dar es Salaam, M-Pesa payment, gym pricing",
+    "Planet Fitness contact, gym membership Tanzania, fitness center Dar es Salaam, Gymkhana Ground, M-Pesa payment, gym pricing",
   openGraph: {
     title: "Contact Planet Fitness Tanzania",
     description:
       "Get in touch with Planet Fitness Tanzania for membership information and start your fitness journey today.",
-    images: ["/images/logo.png"],
+    images: ["/images/new-logo.png"],
   },
 }
 
@@ -20,8 +20,8 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: <Phone className="w-8 h-8 text-brand-orange" />,
-      title: "Phone",
-      details: ["+255 123 456 789", "+255 987 654 321"],
+      title: "Phone Numbers",
+      details: ["+255 752 080 808", "WhatsApp: +255 684 433 363"],
     },
     {
       icon: <Mail className="w-8 h-8 text-brand-orange" />,
@@ -31,12 +31,12 @@ export default function ContactPage() {
     {
       icon: <MapPin className="w-8 h-8 text-brand-orange" />,
       title: "Location",
-      details: ["Dar es Salaam, Tanzania", "Kinondoni District"],
+      details: ["Gymkhana Ground", "Garden Avenue, Dar es Salaam, Tanzania"],
     },
     {
       icon: <Clock className="w-8 h-8 text-brand-orange" />,
-      title: "Hours",
-      details: ["Mon - Fri: 5:00 AM - 10:00 PM", "Sat - Sun: 6:00 AM - 9:00 PM"],
+      title: "Operating Hours",
+      details: ["Weekdays: 05:00 hrs – 22:00 hrs", "Weekends: 07:00 hrs – 19:00 hrs"],
     },
   ]
 
@@ -44,22 +44,22 @@ export default function ContactPage() {
     {
       icon: <Smartphone className="w-6 h-6 text-brand-orange" />,
       name: "Mobile Money",
-      details: "M-Pesa, Tigo Pesa",
+      details: "M-Pesa, Tigo Pesa, Airtel Money",
     },
     {
       icon: <Building className="w-6 h-6 text-brand-orange" />,
       name: "Bank Transfer",
-      details: "All major banks",
+      details: "All major Tanzanian banks",
     },
     {
       icon: <Banknote className="w-6 h-6 text-brand-orange" />,
       name: "Cash Payment",
-      details: "At our facility",
+      details: "At our Gymkhana facility",
     },
     {
       icon: <CreditCard className="w-6 h-6 text-brand-orange" />,
       name: "Credit/Debit Cards",
-      details: "Visa, Mastercard",
+      details: "Visa, Mastercard accepted",
     },
   ]
 
@@ -68,12 +68,13 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 to-slate-800">
+      <section className="pt-20 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Get In Touch</h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Ready to start your fitness journey? Contact us today and let's achieve your goals together.
+              Ready to start your fitness journey? Contact Planet Fitness Tanzania today and let's achieve your goals
+              together.
             </p>
           </div>
         </div>
@@ -85,7 +86,7 @@ export default function ContactPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-gray mb-4">Contact Information</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Multiple ways to reach us - choose what works best for you
+              Visit us at Gymkhana Ground or reach out through any of these convenient methods
             </p>
           </div>
 
@@ -101,7 +102,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold text-brand-gray mb-4">{info.title}</h3>
                 <div className="space-y-2">
                   {info.details.map((detail, detailIndex) => (
-                    <p key={detailIndex} className="text-gray-600">
+                    <p key={detailIndex} className="text-gray-600 text-sm">
                       {detail}
                     </p>
                   ))}
@@ -112,13 +113,34 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Social Media Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-gray mb-6">Follow Us</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Stay connected with Planet Fitness Tanzania for fitness tips, updates, and community highlights
+          </p>
+          <div className="flex justify-center">
+            <a
+              href="https://instagram.com/planetfitnesstz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-lg transition-all duration-300 flex items-center space-x-3"
+            >
+              <Instagram className="w-6 h-6" />
+              <span>@planetfitnesstz</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Payment Options */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-gray mb-4">Payment Options</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Flexible payment methods to make your membership convenient
+              Flexible payment methods to make your membership convenient and accessible
             </p>
           </div>
 
@@ -139,26 +161,64 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-gray mb-4">Find Us</h2>
+            <p className="text-lg text-gray-600">
+              Located at the heart of Dar es Salaam at Gymkhana Ground, Garden Avenue
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.6!2d39.2!3d-6.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDgnMDAuMCJTIDM5wrAxMicwMC4wIkU!5e0!3m2!1sen!2stz!4v1234567890"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Planet Fitness Tanzania Location"
+              className="w-full h-96"
+            />
+          </div>
+          <div className="text-center mt-6">
+            <a
+              href="https://share.google/aZGbuoW0OTl4TAjaU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-brand-orange text-white px-6 py-3 rounded-full font-bold hover:bg-orange-600 transition-colors duration-300"
+            >
+              <MapPin className="w-5 h-5" />
+              View on Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Join Us CTA */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-brand-orange">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Join Us Today</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Life?</h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Take the first step towards a healthier, stronger you. Our team is ready to welcome you to the Planet
-            Fitness family.
+            Take the first step towards a healthier, stronger you. Our team at Gymkhana Ground is ready to welcome you
+            to the Planet Fitness family.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+255123456789"
-              className="bg-brand-orange text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-orange-600 transition-colors duration-300 shadow-lg"
+              href="tel:+255752080808"
+              className="bg-white text-brand-orange px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors duration-300 shadow-lg"
             >
-              Call Now
+              Call +255 752 080 808
             </a>
             <a
-              href="/"
-              className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-slate-900 transition-colors duration-300"
+              href="https://wa.me/255684433363"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-brand-orange transition-colors duration-300"
             >
-              Back to Home
+              WhatsApp Us
             </a>
           </div>
         </div>

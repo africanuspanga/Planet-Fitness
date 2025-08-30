@@ -10,9 +10,9 @@ export default function Navigation() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "/#about" },
-    { name: "Services", href: "/#services" },
-    { name: "Fuel Station", href: "/fuel-station" },
+    { name: "About", href: "/about" },
+    { name: "Membership", href: "/membership" },
+    { name: "Classes", href: "/classes" },
     { name: "Team", href: "/team" },
     { name: "Contact", href: "/contact" },
   ]
@@ -20,16 +20,16 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14 sm:h-16">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
-                src="/images/logo.png"
+                src="/images/new-logo.png"
                 alt="Planet Fitness"
-                width={120}
-                height={40}
-                className="h-8 sm:h-10 w-auto"
+                width={160}
+                height={60}
+                className="h-12 sm:h-16 w-auto"
               />
             </Link>
           </div>

@@ -1,6 +1,8 @@
 import type React from "react"
 import { Inter, Montserrat } from "next/font/google"
 import "./globals.css"
+import WhatsAppButton from "@/components/whatsapp-button"
+import Footer from "@/components/footer"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,11 +28,15 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/logo-icon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        {children}
+        <Footer />
+        <WhatsAppButton />
+      </body>
     </html>
   )
 }
 
 export const metadata = {
-      generator: 'v0.app'
-    };
+  generator: "v0.app",
+}
