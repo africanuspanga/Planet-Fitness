@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { MapPin, Phone, Clock, Instagram, Facebook, Twitter } from "lucide-react"
+import { MapPin, Phone, Clock, Instagram, Facebook, Mail } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -83,6 +83,12 @@ export default function Footer() {
                 <div>
                   <p className="text-sm text-gray-300">+255 752 080 808</p>
                 </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail size={16} className="text-brand-orange flex-shrink-0" />
+                <a href="mailto:info@planetfitness.co.tz" className="text-sm text-gray-300 hover:text-white transition-colors">
+                  info@planetfitness.co.tz
+                </a>
               </div>
             </div>
           </div>

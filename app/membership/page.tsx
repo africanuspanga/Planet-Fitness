@@ -40,7 +40,7 @@ const plans = [
     description: "Perfect for visitors or those who want a single-day workout.",
     price: "27,500",
     usdPrice: "$11",
-    image: "/images/pricing-2.png",
+    image: "/images/day-pass-girl.jpg",
     popular: false,
     icon: Zap,
     tier: "day",
