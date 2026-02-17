@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 export default function MembershipPage() {
   const plans = [
     {
-      title: "Day Pass",
+      title: "One Free Day Pass",
       subtitle: "Perfect for Visitors",
-      description: "Try our facilities for a day and experience what we offer.",
-      price: "29,500/= TZS",
-      usdPrice: "$12.00",
+      description: "Try our facilities for free and experience what we offer.",
+      price: "FREE",
+      usdPrice: "FREE",
       image: "/images/pricing-1.png",
       popular: false,
       features: ["Full gym access", "Locker room facilities", "Basic equipment orientation"],
@@ -119,8 +119,8 @@ export default function MembershipPage() {
               {plans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`bg-white border-2 rounded-3xl p-6 sm:p-8 relative overflow-hidden group hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ${
-                    plan.popular ? "border-brand-orange bg-gradient-to-br from-orange-50 to-white" : "border-gray-200"
+                  className={`border-2 rounded-3xl p-6 sm:p-8 relative overflow-hidden group hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ${
+                    plan.popular ? "border-brand-orange bg-white" : "border-gray-200 bg-white"
                   }`}
                 >
                   {/* Popular badge */}
@@ -156,7 +156,7 @@ export default function MembershipPage() {
                       </div>
 
                       <Button asChild className="w-full bg-brand-gray hover:bg-brand-gray/90 text-white">
-                        <Link href="/contact">Get Started</Link>
+                        <a href="https://okfit.short.gy/pkaI38" target="_blank" rel="noopener noreferrer">Get Started</a>
                       </Button>
                     </div>
                   </div>
@@ -194,7 +194,7 @@ export default function MembershipPage() {
               Join thousands of satisfied members who have transformed their lives at Planet Fitness Tanzania
             </p>
             <Button asChild size="lg" className="bg-white text-brand-orange hover:bg-gray-100">
-              <Link href="/contact">Book Your Free Trial Today</Link>
+              <a href="https://okfit.short.gy/pkaI38" target="_blank" rel="noopener noreferrer">Book Your Free Trial Today</a>
             </Button>
           </div>
         </section>

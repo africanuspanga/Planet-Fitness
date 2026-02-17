@@ -56,11 +56,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="text-sm text-gray-300 hover:text-white transition-colors">
-                  Team
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact" className="text-sm text-gray-300 hover:text-white transition-colors">
                   Contact
                 </Link>
@@ -83,7 +78,6 @@ export default function Footer() {
                 <Phone size={16} className="text-brand-orange flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-300">+255 752 080 808</p>
-                  <p className="text-sm text-gray-300">+255 684 433 363</p>
                 </div>
               </div>
             </div>

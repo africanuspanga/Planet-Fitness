@@ -31,7 +31,7 @@ export default function HeroSection() {
                 size="lg"
                 className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-h-[48px] touch-manipulation"
               >
-                <a href="https://wa.me/255684433363" target="_blank" rel="noopener noreferrer">
+                <a href="https://okfit.short.gy/pkaI38" target="_blank" rel="noopener noreferrer">
                   BOOK NOW
                 </a>
               </Button>
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 size="lg"
                 className="bg-brand-orange hover:bg-brand-orange/90 text-white px-10 py-5 rounded-full text-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                <a href="https://wa.me/255684433363" target="_blank" rel="noopener noreferrer">
+                <a href="https://okfit.short.gy/pkaI38" target="_blank" rel="noopener noreferrer">
                   BOOK NOW
                 </a>
               </Button>

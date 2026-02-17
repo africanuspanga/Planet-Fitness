@@ -21,7 +21,7 @@ export default function ContactPage() {
     {
       icon: <Phone className="w-8 h-8 text-brand-orange" />,
       title: "Phone Numbers",
-      details: ["+255 752 080 808", "WhatsApp: +255 684 433 363"],
+      details: ["+255 752 080 808", "WhatsApp: +255 752 080 808"],
     },
     {
       icon: <Mail className="w-8 h-8 text-brand-orange" />,
@@ -213,7 +213,7 @@ export default function ContactPage() {
               Call +255 752 080 808
             </a>
             <a
-              href="https://wa.me/255684433363"
+              href="https://wa.me/255752080808"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-brand-orange transition-colors duration-300"
