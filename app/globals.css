@@ -167,12 +167,6 @@ textarea {
 }
 
 /* Enhanced mobile-friendly transitions and interactions */
-/* Smooth transitions with reduced motion support */
-@media (prefers-reduced-motion: no-preference) {
-  * {
-    transition: all 0.3s ease;
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   * {

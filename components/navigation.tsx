@@ -13,7 +13,6 @@ export default function Navigation() {
     { name: "About", href: "/about" },
     { name: "Membership", href: "/membership" },
     { name: "Classes", href: "/classes" },
-    { name: "Team", href: "/team" },
     { name: "Contact", href: "/contact" },
   ]
 
@@ -51,12 +50,14 @@ export default function Navigation() {
 
           {/* Join Now Button */}
           <div className="hidden md:block">
-            <Link
-              href="/contact"
+            <a
+              href="https://portal.okfit.in/members/add/form/get/96b095f5f5467e5e8465dceac5266b74b463d5237f6936814feaf443609bfad7"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-brand-orange text-white px-4 lg:px-6 py-2 rounded-full text-sm font-medium btn-hover transition-all duration-300 hover:scale-105"
             >
               Join Now
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -85,13 +86,15 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href="/contact"
+              <a
+                href="https://portal.okfit.in/members/add/form/get/96b095f5f5467e5e8465dceac5266b74b463d5237f6936814feaf443609bfad7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-brand-orange text-white block px-3 py-3 rounded-full text-base font-medium mt-4 text-center transition-all duration-300 hover:bg-brand-orange/90"
                 onClick={() => setIsOpen(false)}
               >
                 Join Now
-              </Link>
+              </a>
             </div>
           </div>
         )}

@@ -74,7 +74,7 @@ export default function FacilitiesSection() {
           <h3 className="text-2xl sm:text-3xl font-bold font-serif mb-6">Meet the Founder</h3>
 
           <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-6 overflow-hidden">
-            <img src="/images/founder.jpeg" alt="Ramadhan J Mdula - Founder" className="w-full h-full object-cover" />
+            <img src="/images/foound.jpeg" alt="Ramadhan J Mdula - Founder" className="w-full h-full object-cover" />
           </div>
 
           <h4 className="text-lg sm:text-xl font-bold mb-2">Ramadhan J Mdula</h4>

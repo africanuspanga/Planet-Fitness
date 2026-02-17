@@ -50,7 +50,6 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="font-medium text-sm sm:text-base">+255 752 080 808</p>
-                  <p className="text-xs sm:text-sm opacity-70">+255 684 433 363</p>
                 </div>
               </div>
             </div>

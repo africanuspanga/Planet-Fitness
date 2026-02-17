@@ -4,9 +4,16 @@ import AboutSection from "@/components/about-section"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "About Us - Planet Fitness Tanzania",
+  title: "About Us - Planet Fitness Tanzania | Our Story & Mission",
   description:
-    "Learn about Planet Fitness Tanzania's mission to provide world-class fitness equipment, expert trainers, and a supportive community in Dar es Salaam.",
+    "Learn about Planet Fitness Tanzania's mission to provide world-class fitness equipment, expert trainers, and a supportive community in Dar es Salaam. Founded by Ramadhan J Mdula.",
+  openGraph: {
+    title: "About Planet Fitness Tanzania",
+    description:
+      "Discover our story, mission, and commitment to transforming lives through fitness at Gymkhana Ground, Dar es Salaam.",
+    url: "https://planetfitness.co.tz/about",
+    images: ["/images/new-logo.png"],
+  },
 }
 
 export default function AboutPage() {
@@ -45,7 +52,7 @@ export default function AboutPage() {
                     size="lg"
                     className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
                   >
-                    <a href="https://wa.me/255684433363" target="_blank" rel="noopener noreferrer">
+                    <a href="https://portal.okfit.in/members/add/form/get/96b095f5f5467e5e8465dceac5266b74b463d5237f6936814feaf443609bfad7" target="_blank" rel="noopener noreferrer">
                       Start Your Journey Today
                     </a>
                   </Button>
@@ -63,6 +70,23 @@ export default function AboutPage() {
                 <div className="absolute -bottom-4 -right-4 w-full h-full bg-brand-orange/20 rounded-lg -z-10"></div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className="py-16 bg-brand-orange">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold font-serif text-white mb-6">Have Questions?</h2>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              Get in touch with our team to learn more about our facilities, memberships, and how we can help you achieve your fitness goals.
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-brand-orange hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
+            >
+              <a href="/contact">Contact Us</a>
+            </Button>
           </div>
         </section>
       </div>
