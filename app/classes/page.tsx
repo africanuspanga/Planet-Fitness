@@ -417,33 +417,6 @@ export default function ClassesPage() {
           </div>
         </section>
 
-        {/* Our Trainers */}
-        <section className="py-16 sm:py-20 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <p className="text-brand-orange text-sm font-semibold tracking-widest uppercase mb-3">Meet the Team</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray font-serif mb-3">Our Trainers</h2>
-              <p className="text-gray-500 max-w-xl mx-auto">
-                Certified professionals dedicated to helping you reach your fitness goals.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {["Michael", "Van", "Sele", "Mbao", "Yasin", "Ibad"].map((trainer) => (
-                <div
-                  key={trainer}
-                  className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 text-center hover:shadow-md transition-shadow"
-                >
-                  <div className="w-14 h-14 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Users className="w-6 h-6 text-brand-orange" />
-                  </div>
-                  <p className="font-bold text-brand-gray text-sm">{trainer}</p>
-                  <p className="text-xs text-gray-400">Certified Trainer</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA */}
         <section className="bg-brand-orange text-white py-16 sm:py-20">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

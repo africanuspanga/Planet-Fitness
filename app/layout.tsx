@@ -4,6 +4,7 @@ import { Inter, Montserrat } from "next/font/google"
 import "./globals.css"
 import WhatsAppButton from "@/components/whatsapp-button"
 import Footer from "@/components/footer"
+import FreeDayPassPopup from "@/components/free-day-pass-popup"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -103,6 +104,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppButton />
+        <FreeDayPassPopup />
       </body>
     </html>
   )
