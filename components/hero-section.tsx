@@ -53,7 +53,7 @@ export default function HeroSection() {
               size="lg"
               className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-h-[48px] touch-manipulation"
             >
-              <a href="https://okfit.short.gy/pkaI38" target="_blank" rel="noopener noreferrer">
+              <a href="https://portal.okfit.in/members/add/form/get/96b095f5f5467e5e8465dceac5266b74b463d5237f6936814feaf443609bfad7" target="_blank" rel="noopener noreferrer">
                 Join Now
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>

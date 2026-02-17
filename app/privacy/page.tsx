@@ -2,7 +2,13 @@ import Navigation from "@/components/navigation"
 
 export const metadata = {
   title: "Privacy Policy - Planet Fitness Tanzania",
-  description: "Privacy Policy for Planet Fitness Tanzania",
+  description:
+    "Read the Privacy Policy for Planet Fitness Tanzania. Learn how we collect, use, and protect your personal information.",
+  openGraph: {
+    title: "Privacy Policy - Planet Fitness Tanzania",
+    description: "How Planet Fitness Tanzania handles and protects your personal data.",
+    url: "https://planetfitness.co.tz/privacy",
+  },
 }
 
 export default function PrivacyPage() {

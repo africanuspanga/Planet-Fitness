@@ -2,7 +2,13 @@ import Navigation from "@/components/navigation"
 
 export const metadata = {
   title: "Terms & Conditions - Planet Fitness Tanzania",
-  description: "Terms and Conditions for Planet Fitness Tanzania",
+  description:
+    "Read the Terms and Conditions for Planet Fitness Tanzania. Rules, membership policies, refund policy, freezing policy, and gym regulations.",
+  openGraph: {
+    title: "Terms & Conditions - Planet Fitness Tanzania",
+    description: "Membership rules, refund policies, and gym regulations at Planet Fitness Tanzania.",
+    url: "https://planetfitness.co.tz/terms",
+  },
 }
 
 export default function TermsPage() {

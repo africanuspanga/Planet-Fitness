@@ -105,7 +105,9 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-gray-300">© 2025 Planet Fitness Tanzania. All rights reserved.</p>
+            <p className="text-sm text-gray-300">
+              <a href="https://www.driftmark.co.tz/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-gray-300" aria-hidden="true">&copy;</a> 2026 Planet Fitness Tanzania. All rights reserved.
+            </p>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-sm text-gray-300 hover:text-white transition-colors">
                 Privacy Policy

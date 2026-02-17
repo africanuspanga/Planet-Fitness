@@ -1,13 +1,24 @@
 import type { Metadata } from "next"
 import Navigation from "@/components/navigation"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Check, Star, Zap, Crown, Trophy, Dumbbell, Clock } from "lucide-react"
 
+const REGISTRATION_URL =
+  "https://portal.okfit.in/members/add/form/get/96b095f5f5467e5e8465dceac5266b74b463d5237f6936814feaf443609bfad7"
+
 export const metadata: Metadata = {
-  title: "Membership Plans - Planet Fitness Tanzania",
+  title: "Membership Plans & Pricing - Planet Fitness Tanzania | Gym in Dar es Salaam",
   description:
-    "Choose from our flexible membership plans including day pass, monthly, quarterly, and annual options at Planet Fitness Tanzania.",
+    "Explore flexible membership plans at Planet Fitness Tanzania. From a free day pass to annual platinum membership. Join Dar es Salaam's premier fitness center today.",
+  keywords:
+    "Planet Fitness membership, gym pricing Tanzania, fitness membership Dar es Salaam, day pass gym, monthly gym membership",
+  openGraph: {
+    title: "Membership Plans - Planet Fitness Tanzania",
+    description:
+      "Choose from flexible membership plans at Planet Fitness Tanzania. Day pass, monthly, quarterly, and annual options available.",
+    url: "https://planetfitness.co.tz/membership",
+    images: ["/images/new-logo.png"],
+  },
 }
 
 const plans = [
@@ -26,10 +37,10 @@ const plans = [
   {
     title: "Day Pass",
     subtitle: "Drop In Anytime",
-    description: "Perfect for visitors or those who want a single-day workout session.",
+    description: "Perfect for visitors or those who want a single-day workout.",
     price: "27,500",
     usdPrice: "$11",
-    image: "/images/pricing-1.png",
+    image: "/images/pricing-2.png",
     popular: false,
     icon: Zap,
     tier: "day",
@@ -111,29 +122,13 @@ const plans = [
 function getTierStyle(tier: string, popular: boolean) {
   if (popular)
     return {
-      card: "border-brand-orange ring-2 ring-brand-orange/20 bg-[#fffaf6]",
+      card: "border-brand-orange ring-2 ring-brand-orange/20",
       badge: "bg-brand-orange text-white",
-      priceBox: "bg-brand-orange text-white",
       button: "bg-brand-orange hover:bg-brand-orange/90 text-white",
     }
-  if (tier === "free")
-    return {
-      card: "border-gray-200 bg-white",
-      badge: "",
-      priceBox: "bg-gray-900 text-white",
-      button: "bg-gray-900 hover:bg-gray-800 text-white",
-    }
-  if (tier === "platinum" || tier === "gold")
-    return {
-      card: "border-gray-200 bg-white",
-      badge: "",
-      priceBox: "bg-brand-gray text-white",
-      button: "bg-brand-gray hover:bg-brand-gray/90 text-white",
-    }
   return {
-    card: "border-gray-200 bg-white",
+    card: "border-gray-200",
     badge: "",
-    priceBox: "bg-brand-gray text-white",
     button: "bg-brand-gray hover:bg-brand-gray/90 text-white",
   }
 }
@@ -143,7 +138,7 @@ export default function MembershipPage() {
     <main className="min-h-screen bg-gray-50">
       <Navigation />
       <div className="pt-16">
-        {/* Hero Section */}
+        {/* Hero */}
         <section className="relative bg-gray-900 text-white py-20 sm:py-28 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/pricing-2.png')] bg-cover bg-center opacity-15" />
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/90 to-gray-900" />
@@ -156,7 +151,8 @@ export default function MembershipPage() {
               <span className="text-brand-orange"> Fits You</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              From a free trial to our all-inclusive Platinum membership, we have the right option for every fitness journey.
+              From a free trial to our all-inclusive Platinum membership, we have the right option for every fitness
+              journey.
             </p>
           </div>
         </section>
@@ -165,10 +161,10 @@ export default function MembershipPage() {
         <section className="py-16 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray font-serif mb-3">
-                Rate Card 2025
-              </h2>
-              <p className="text-gray-500 text-sm">Exchange Rate: 1 USD = 2,550 TZS &middot; All prices VAT inclusive</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray font-serif mb-3">Rate Card 2025</h2>
+              <p className="text-gray-500 text-sm">
+                {"Exchange Rate: 1 USD = 2,550 TZS \u00b7 All prices VAT inclusive"}
+              </p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
@@ -177,60 +173,71 @@ export default function MembershipPage() {
                 return (
                   <div
                     key={index}
-                    className={`relative rounded-2xl border p-5 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-md ${style.card}`}
+                    className={`relative rounded-2xl border bg-white overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-md ${style.card}`}
                   >
                     {plan.popular && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                        <span className={`${style.badge} px-4 py-1 rounded-full text-xs font-bold tracking-wide uppercase`}>
+                      <div className="absolute top-4 right-4 z-10">
+                        <span
+                          className={`${style.badge} px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase`}
+                        >
                           Most Popular
                         </span>
                       </div>
                     )}
 
-                    {/* Icon + Title */}
-                    <div className="flex items-center gap-3 mb-4 mt-1">
-                      <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center flex-shrink-0">
-                        <plan.icon className="w-5 h-5 text-brand-orange" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-bold font-serif text-brand-gray leading-tight">{plan.title}</h3>
-                        <p className="text-xs text-brand-orange font-medium">{plan.subtitle}</p>
+                    {/* Image */}
+                    <div className="relative h-40 sm:h-44 overflow-hidden">
+                      <img
+                        src={plan.image}
+                        alt={plan.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute bottom-3 left-4 flex items-center gap-2">
+                        <div className="w-8 h-8 rounded-lg bg-brand-orange/90 flex items-center justify-center">
+                          <plan.icon className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white text-xs font-medium">{plan.subtitle}</span>
                       </div>
                     </div>
 
-                    <p className="text-sm text-gray-500 leading-relaxed mb-4">{plan.description}</p>
+                    {/* Content */}
+                    <div className="p-5 flex flex-col flex-1">
+                      <h3 className="text-lg font-bold font-serif text-brand-gray leading-tight mb-1">{plan.title}</h3>
+                      <p className="text-sm text-gray-500 leading-relaxed mb-4">{plan.description}</p>
 
-                    {/* Price */}
-                    <div className={`rounded-xl py-3 px-4 text-center mb-4 ${style.priceBox}`}>
-                      {plan.price === "FREE" ? (
-                        <span className="text-2xl font-bold">FREE</span>
-                      ) : (
-                        <>
-                          <span className="text-2xl font-bold">{plan.price}</span>
-                          <span className="text-sm font-medium opacity-80"> TZS</span>
-                          {plan.usdPrice && (
-                            <span className="block text-xs opacity-70 mt-0.5">{plan.usdPrice} USD</span>
-                          )}
-                        </>
-                      )}
+                      {/* Price */}
+                      <div className="bg-gray-50 rounded-xl py-3 px-4 text-center mb-4">
+                        {plan.price === "FREE" ? (
+                          <span className="text-2xl font-bold text-brand-orange">FREE</span>
+                        ) : (
+                          <>
+                            <span className="text-2xl font-bold text-brand-gray">{plan.price}</span>
+                            <span className="text-sm font-medium text-gray-400"> TZS</span>
+                            {plan.usdPrice && (
+                              <span className="block text-xs text-gray-400 mt-0.5">{plan.usdPrice} USD</span>
+                            )}
+                          </>
+                        )}
+                      </div>
+
+                      {/* Features */}
+                      <ul className="flex-1 space-y-2 mb-5">
+                        {plan.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <Check className="w-4 h-4 text-brand-orange flex-shrink-0 mt-0.5" />
+                            <span className="text-sm text-gray-600">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* CTA */}
+                      <Button asChild className={`w-full rounded-xl font-semibold ${style.button}`}>
+                        <a href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
+                          {plan.price === "FREE" ? "Claim Free Pass" : "Get Started"}
+                        </a>
+                      </Button>
                     </div>
-
-                    {/* Features */}
-                    <ul className="flex-1 space-y-2 mb-5">
-                      {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <Check className="w-4 h-4 text-brand-orange flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-gray-600">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* CTA */}
-                    <Button asChild className={`w-full rounded-xl font-semibold ${style.button}`}>
-                      <a href="https://okfit.short.gy/pkaI38" target="_blank" rel="noopener noreferrer">
-                        {plan.price === "FREE" ? "Claim Free Pass" : "Get Started"}
-                      </a>
-                    </Button>
                   </div>
                 )
               })}
@@ -286,7 +293,7 @@ export default function MembershipPage() {
               size="lg"
               className="bg-white text-brand-orange hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-bold"
             >
-              <a href="https://okfit.short.gy/pkaI38" target="_blank" rel="noopener noreferrer">
+              <a href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
                 Book Your Free Trial Today
               </a>
             </Button>

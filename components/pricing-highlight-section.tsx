@@ -105,7 +105,7 @@ export default function PricingHighlightSection() {
                     : "bg-brand-gray hover:bg-brand-gray/90 text-white"
                 }`}
               >
-                <a href="https://okfit.short.gy/pkaI38" target="_blank" rel="noopener noreferrer">
+                <a href="https://portal.okfit.in/members/add/form/get/96b095f5f5467e5e8465dceac5266b74b463d5237f6936814feaf443609bfad7" target="_blank" rel="noopener noreferrer">
                   Get Started
                 </a>
               </Button>

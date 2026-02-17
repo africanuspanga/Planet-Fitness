@@ -4,9 +4,16 @@ import AboutSection from "@/components/about-section"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "About Us - Planet Fitness Tanzania",
+  title: "About Us - Planet Fitness Tanzania | Our Story & Mission",
   description:
-    "Learn about Planet Fitness Tanzania's mission to provide world-class fitness equipment, expert trainers, and a supportive community in Dar es Salaam.",
+    "Learn about Planet Fitness Tanzania's mission to provide world-class fitness equipment, expert trainers, and a supportive community in Dar es Salaam. Founded by Ramadhan J Mdula.",
+  openGraph: {
+    title: "About Planet Fitness Tanzania",
+    description:
+      "Discover our story, mission, and commitment to transforming lives through fitness at Gymkhana Ground, Dar es Salaam.",
+    url: "https://planetfitness.co.tz/about",
+    images: ["/images/new-logo.png"],
+  },
 }
 
 export default function AboutPage() {
@@ -45,7 +52,7 @@ export default function AboutPage() {
                     size="lg"
                     className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
                   >
-                    <a href="https://okfit.short.gy/pkaI38" target="_blank" rel="noopener noreferrer">
+                    <a href="https://portal.okfit.in/members/add/form/get/96b095f5f5467e5e8465dceac5266b74b463d5237f6936814feaf443609bfad7" target="_blank" rel="noopener noreferrer">
                       Start Your Journey Today
                     </a>
                   </Button>
