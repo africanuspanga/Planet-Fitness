@@ -27,7 +27,6 @@ const plans = [
     subtitle: "Try Us Out",
     description: "Experience our world-class facilities completely free for one day.",
     price: "FREE",
-    usdPrice: "",
     image: "/images/pricing-1.png",
     popular: false,
     icon: Clock,
@@ -38,8 +37,7 @@ const plans = [
     title: "Day Pass",
     subtitle: "Drop In Anytime",
     description: "Perfect for visitors or those who want a single-day workout.",
-    price: "27,500",
-    usdPrice: "$11",
+    price: "29,500",
     image: "/images/day-pass-girl.jpg",
     popular: false,
     icon: Zap,
@@ -51,7 +49,6 @@ const plans = [
     subtitle: "Get Started",
     description: "Kickstart your fitness journey with our monthly membership.",
     price: "218,300",
-    usdPrice: "$85",
     image: "/images/pricing-2.png",
     popular: true,
     icon: Star,
@@ -63,7 +60,6 @@ const plans = [
     subtitle: "Best Value",
     description: "Commit to your goals and save with the quarterly plan.",
     price: "619,500",
-    usdPrice: "$240",
     image: "/images/pricing-7months.png",
     popular: false,
     icon: Trophy,
@@ -75,7 +71,6 @@ const plans = [
     subtitle: "Serious Results",
     description: "For those ready to make a lasting commitment to fitness.",
     price: "1,132,800",
-    usdPrice: "$445",
     image: "/images/pricing-6month-new.png",
     popular: false,
     icon: Crown,
@@ -92,7 +87,6 @@ const plans = [
     subtitle: "Ultimate Plan",
     description: "Our premium annual membership with every benefit included.",
     price: "2,124,800",
-    usdPrice: "$835",
     image: "/images/pricing-1year-new.png",
     popular: false,
     icon: Crown,
@@ -110,7 +104,6 @@ const plans = [
     subtitle: "One-on-One",
     description: "Individual session with an expert trainer tailored to your goals.",
     price: "29,500",
-    usdPrice: "$12",
     image: "/images/pricing-personal-new.png",
     popular: false,
     icon: Dumbbell,
@@ -161,10 +154,8 @@ export default function MembershipPage() {
         <section className="py-16 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray font-serif mb-3">Rate Card 2025</h2>
-              <p className="text-gray-500 text-sm">
-                {"Exchange Rate: 1 USD = 2,550 TZS \u00b7 All prices VAT inclusive"}
-              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray font-serif mb-3">Rate Card 2026</h2>
+              <p className="text-gray-500 text-sm">All prices are in TZS and VAT inclusive</p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
@@ -214,9 +205,6 @@ export default function MembershipPage() {
                           <>
                             <span className="text-2xl font-bold text-brand-gray">{plan.price}</span>
                             <span className="text-sm font-medium text-gray-400"> TZS</span>
-                            {plan.usdPrice && (
-                              <span className="block text-xs text-gray-400 mt-0.5">{plan.usdPrice} USD</span>
-                            )}
                           </>
                         )}
                       </div>
@@ -252,27 +240,20 @@ export default function MembershipPage() {
               <div className="bg-brand-gray px-6 py-4">
                 <h3 className="text-lg font-bold text-white font-serif">Special Offers & Discounts</h3>
               </div>
-              <div className="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+              <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
                 <div className="p-6 text-center">
                   <div className="w-10 h-10 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-brand-orange font-bold text-sm">60+</span>
                   </div>
                   <h4 className="font-semibold text-brand-gray mb-1">Senior Discount</h4>
-                  <p className="text-sm text-gray-500">177,000 TZS / $70 monthly</p>
-                </div>
-                <div className="p-6 text-center">
-                  <div className="w-10 h-10 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-brand-orange font-bold text-xs">18-25</span>
-                  </div>
-                  <h4 className="font-semibold text-brand-gray mb-1">Student Discount</h4>
-                  <p className="text-sm text-gray-500">177,000 TZS / $70 monthly</p>
+                  <p className="text-sm text-gray-500">177,000 TZS monthly</p>
                 </div>
                 <div className="p-6 text-center">
                   <div className="w-10 h-10 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Dumbbell className="w-4 h-4 text-brand-orange" />
                   </div>
                   <h4 className="font-semibold text-brand-gray mb-1">Diet & Workout Plan</h4>
-                  <p className="text-sm text-gray-500">118,000 TZS / $45</p>
+                  <p className="text-sm text-gray-500">118,000 TZS</p>
                 </div>
               </div>
             </div>

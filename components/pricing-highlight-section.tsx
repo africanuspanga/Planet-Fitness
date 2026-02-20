@@ -7,7 +7,7 @@ const highlightPlans = [
     title: "1 Month",
     tier: "Bronze",
     price: "218,300",
-    usd: "$85",
+    
     icon: Star,
     features: ["Full gym access", "Group fitness classes", "Locker room facilities"],
     accent: false,
@@ -16,7 +16,7 @@ const highlightPlans = [
     title: "3 Months",
     tier: "Silver",
     price: "619,500",
-    usd: "$240",
+    
     icon: Trophy,
     features: ["All Bronze benefits", "Personal training consultation", "Nutrition plan"],
     accent: true,
@@ -25,7 +25,7 @@ const highlightPlans = [
     title: "6 Months",
     tier: "Gold",
     price: "1,132,800",
-    usd: "$445",
+    
     icon: Crown,
     features: ["All Silver benefits", "2 personal training sessions", "Priority class booking"],
     accent: false,
@@ -85,7 +85,7 @@ export default function PricingHighlightSection() {
                   <span className="text-3xl font-bold text-brand-gray">{plan.price}</span>
                   <span className="text-sm text-gray-400 font-medium">TZS</span>
                 </div>
-                <p className="text-xs text-gray-400 mt-0.5">{plan.usd} USD</p>
+                
               </div>
 
               <ul className="flex-1 space-y-2.5 mb-6">

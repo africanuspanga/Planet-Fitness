@@ -97,7 +97,7 @@ export default function TermsPage() {
                 </div>
 
                 <p className="text-sm text-gray-600 mt-8">
-                  Last updated: February 2025
+                  Last updated: February 2026
                 </p>
               </div>
             </div>
