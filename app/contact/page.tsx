@@ -1,6 +1,6 @@
 import Navigation from "@/components/navigation"
 import { Button } from "@/components/ui/button"
-import { Phone, Mail, MapPin, Clock, CreditCard, Smartphone, Building, Banknote, Instagram } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, CreditCard, Building, Banknote, Instagram } from "lucide-react"
 import type { Metadata } from "next"
 
 const REGISTRATION_URL =
@@ -50,11 +50,6 @@ export default function ContactPage() {
   ]
 
   const paymentMethods = [
-    {
-      icon: <Smartphone className="w-5 h-5" />,
-      name: "Mobile Money",
-      details: "M-Pesa, Tigo Pesa, Airtel Money",
-    },
     {
       icon: <Building className="w-5 h-5" />,
       name: "Bank Transfer",
@@ -183,7 +178,7 @@ export default function ContactPage() {
                 Flexible payment methods to make your membership convenient and accessible.
               </p>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {paymentMethods.map((method, index) => (
                 <div
                   key={index}
